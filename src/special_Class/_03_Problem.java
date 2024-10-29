@@ -8,7 +8,7 @@ public class _03_Problem {
         Scanner scan = new Scanner(System.in);
 
         // 나이
-        System.out.print();
+        System.out.print("나이를 입력하세요: ");
         int age = scan.nextInt();
         // 이벤트 코드
         String eventCode = scan.next();
