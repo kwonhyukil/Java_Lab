@@ -7,17 +7,17 @@ public class _02_Lab2 {
 
         Scanner scan = new Scanner(System.in);
 
-        // 1부터 7까지의 정수를 입력
-
         // 잘못된 숫자 입력시 재입력 == 무한 반복(While문 사용)
         int inputValue = 0;
 
         while (true){
+            // 1부터 7까지의 정수를 입력
             System.out.print("1~7 사이의 숫자를 입력 하세요: ");
             inputValue = scan.nextInt();
 
             if (inputValue >= 1 && inputValue <= 7){
                 break;
+            // 잘못된 숫자 입력시 재입력
             } else {
                 System.out.println("유효 하지 않은 숫자 입니다. 1~7 사이의 숫자를 입력 하세요.");
             }
@@ -34,17 +34,11 @@ public class _02_Lab2 {
             case 7 -> "일요일" ;
             default -> null;
         };
+        // 1 ~ 5 = "주중" , 6 ~ 7 = "주말"
         if (inputValue >= 1 && inputValue <= 5){
             System.out.println(date + ", 주중");
         } else {
             System.out.println(date + ", 주말");
         }
-
-
-        // 잘못된 숫자 입력시 재입력
-
-        // 토요일(6) 일요일(7) "주말" 그 외 주중
-
-
     }
 }
