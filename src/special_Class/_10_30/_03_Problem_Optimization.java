@@ -1,4 +1,4 @@
-package special_Class;
+package special_Class._10_30;
 
 public class _03_Problem_Optimization {
     public static void main(String[] args) {

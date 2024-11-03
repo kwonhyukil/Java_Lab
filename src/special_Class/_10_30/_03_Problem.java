@@ -1,4 +1,4 @@
-package special_Class;
+package special_Class._10_30;
 
 
 import java.util.Scanner;
