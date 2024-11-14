@@ -35,6 +35,11 @@ public class _08_Random {
             // (int) 0.0 <= R <= (int) 45
             // 1 +  0    <= R <= 45 + 1
             //      1    <= R <  46
+
         }
+        int minInt = 5;
+        int maxInt = 15;
+        int boundedInt = (int) (Math.random() * (maxInt - minInt + 1) + minInt);
+        System.out.println("5부터 15까지의 난수 (정수): " + boundedInt);
     }
 }
