@@ -1,10 +1,11 @@
-package special_Class;
-
-public class _11_14 {
-}
+package special_Class._11_14;
 
 
-public class Problem1 {
+import java.util.Scanner;
+
+public class _01_Problem {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
         // 라운드 시작 게임 라운드 번호 표시
         int gameRound = 1;
@@ -114,3 +115,5 @@ public class Problem1 {
     }
 
 }
+
+
