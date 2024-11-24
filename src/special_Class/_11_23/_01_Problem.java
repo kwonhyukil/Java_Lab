@@ -46,5 +46,3 @@ public class _01_Problem {
             }
         }
 
-    }
-}
