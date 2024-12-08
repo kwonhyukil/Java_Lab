@@ -44,41 +44,45 @@ public class _01_Problem {
             }
             switch (menuChoice) {
                 case 1:
-                    while (true) {
+                    boolean MatrixCheck = false;
+                    while (MatrixCheck) {
                         System.out.print("빙고 Matrix의 N 값을 입력 하세요 (3 이상 9 이하 홀수): ");
                         bingoMatrix = scan.nextInt();
                         if (bingoMatrix % 2 != 1) {
                             System.out.println("N 값은 3이상 9이하 정수 중 홀수 값만 입력 가능합니다.");
                             continue;
-                        }
-                        boolean randomCheck = false;
-                        while (randomCheck) {
-                            System.out.print("난수 범위의 시작 값을 입력하세요: ");
-                            startNum = scan.nextInt();
-                            System.out.print("난수 범위의 종료 값을 입력하세요: ");
-                            endNum = scan.nextInt();
-                            if ((endNum - startNum + 1) < bingoMatrix * bingoMatrix) {
-                                System.out.println("종료 값 - 시작 값이 N x N 보다 크거나 같아야 합니다.");
-                                continue;
-                            } else {
-                                randomCheck = true;
+                        } else {
+                            MatrixCheck = true;
+
+                            boolean randomCheck = false;
+                            while (randomCheck) {
+                                System.out.print("난수 범위의 시작 값을 입력하세요: ");
+                                startNum = scan.nextInt();
+                                System.out.print("난수 범위의 종료 값을 입력하세요: ");
+                                endNum = scan.nextInt();
+                                if ((endNum - startNum + 1) < bingoMatrix * bingoMatrix) {
+                                    System.out.println("종료 값 - 시작 값이 N x N 보다 크거나 같아야 합니다.");
+                                    continue;
+                                } else {
+                                    randomCheck = true;
+                                }
                             }
-                        }
-                        boolean matrixNum = false;
-                        while (matrixNum) {
-                            System.out.print("작성할 빙고 매트릭스 수 M을 입력하세요 (1 이상 7이하): ");
-                            bingoMatrixNum = scan.nextInt();
-                            if (bingoMatrixNum < 1 || bingoMatrixNum > 7) {
-                                System.out.println("M 값은 1이상 7이하 양수만 입력 가능합니다.");
-                            } else {
-                                matrixNum = true;
+                            boolean matrixNum = false;
+                            while (matrixNum) {
+                                System.out.print("작성할 빙고 매트릭스 수 M을 입력하세요 (1 이상 7이하): ");
+                                bingoMatrixNum = scan.nextInt();
+                                if (bingoMatrixNum < 1 || bingoMatrixNum > 7) {
+                                    System.out.println("M 값은 1이상 7이하 양수만 입력 가능합니다.");
+                                } else {
+                                    matrixNum = true;
+                                }
                             }
-                        }
-                        for (int i = 0; i < bingoBoard.length; i++) {
-                            for (int j = 0; j < bingoBoard[j].length; j++) {
-                                for (int k = 0; k < bingoBoard[j][k].length; k++) {
-                                    randomNum = (int) (Math.random() * (endNum - startNum + 1) + startNum);
-                                    bingoBoard[i][j][k] = randomNum;
+                            for (int i = 0; i < bingoBoard.length; i++) {
+                                for (int j = 0; j < bingoBoard[j].length; j++) {
+                                    for (int k = 0; k < bingoBoard[j][k].length; k++) {
+                                        randomNum = (int) (Math.random() * (endNum - startNum + 1) + startNum);
+                                        bingoBoard[i][j][k] = randomNum;
+                                        System.out.print(bingoBoard[i][j][k] + " ");
                                     }
                                 }
                             }
@@ -89,6 +93,7 @@ public class _01_Problem {
             }
         }
     }
+}
 
 
                         // 빙고 Matrix N 값을 입력합니다. N 값은 홀수만 가능 아닐 경우 재입력
